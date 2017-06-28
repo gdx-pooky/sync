@@ -1,0 +1,13 @@
+[{
+  "name"        : "syncServer",
+  "script"      : "./start.js",
+  "args"        :"-rpc 50056",
+  "cwd"         : "./", // 指定该app工作目录，这样pm2会相对这个目录去找脚本之类的。
+  "error_file" : "./logs/pm2-sync-err.log",
+  "out_file"   : "./logs/pm2-sync-out.log",
+  "pid_file"   : "./pm2-sync.pid",
+  "one_launch_only"  : "true",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}]

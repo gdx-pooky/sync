@@ -1,0 +1,74 @@
+/**
+ * Created by shipengqi on 17-2-13.
+ */
+
+//code 状态常量
+/*
+ *内容服务：12XXXX
+ *已订阅内容源的新闻列表接口：1201XX
+ *已订阅内容源的新闻列表总数/页码接口：1202XX
+ *新闻拷贝接口：1203XX
+ *批量新闻拷贝接口：1204XX
+ *创建其他区域内容源管理接口：1205XX
+ *各个区块管理列表接口：1211XX
+ *各个区块排序保存接口：1212XX
+ *单一文章发布/取消发布接口：1213XX
+ *文章移动接口：1214XX
+ *文章删除接口：1215XX
+ *文章详情接口：1221XX
+ *文章添加/编辑接口：1222XX
+ *内容状态接口 :1223XX
+ * */
+
+const RESDATA_FAIL = -1;                        //错误测试码 作用：用于主动从服务端返回错误或接口未完成
+const RESDATA_SUCCESS = 0;                      //请求成功码 作用：用于返回成功结果的码
+const RESDATA_INTERFACE_UNDEFINED = 990101;     //接口链接不存在码 作用：用于判断接口链接是否存在
+const RESDATA_BODY_VALUE_UNDEFINED = 990201;    //参数不存在错误码 作用：用于判断body中子属性是否是undefined
+const RESDATA_BODY_VALUE_INEXACTITUDE = 990202; //参数类型错误码 作用：用于判断body中子属性的类型是否正确
+const RESDATA_BODY_VALUE_FAIL = 990203;         //参数值错误 作用：用于判断代码逻辑过程中发生的参数值类型错误
+const RESDATA_UNKNOWN_ERROR = 999999;           //未知错误码 作用：用于try/catch语法中使用（如：请求，数据库操作等）
+
+const RESDATA_UNKNOWN_NEWS_ID = 122101;         //未知的 newsId
+const RESDATA_UNKNOWN_TYPE = 122102;             //未知的 文章type
+
+const RESDATA_GET_CACHE_ERROR = 120101;    //获取redis缓存失败
+const RESDATA_ELASTICK_SEARCH_ERROR = 120103;    //搜索引擎response error
+
+const RESDATA_COPY_ERROR = 120401;
+const RESDATA_REPETITIVE_OPERATION = 120402;
+const RESDATA_INSERT_MONGO_ERROR = 12403;
+const RESDATA_INSERT_LOCAL_NEWS_ERROR = 12404;
+const RESDATA_INSERT_IMAGES_ERROR = 12405;
+const RESDATA_INSERT_COMMON_ERROR = 12406;
+const RESDATA_INSERT_REGION_ERROR = 12407;
+const RESDATA_INSERT_AREA_ERROR = 12408;
+const RESDATA_INSERT_TAG_ERROR = 12409;
+const RESDATA_INSERT_COPY_ERROR = 12410;
+
+const RESDATA_SHOW_TYPE_IS_NULL = 122301;
+
+
+export {
+    RESDATA_FAIL,
+    RESDATA_SUCCESS,
+    RESDATA_INTERFACE_UNDEFINED,
+    RESDATA_BODY_VALUE_UNDEFINED,
+    RESDATA_BODY_VALUE_INEXACTITUDE,
+    RESDATA_BODY_VALUE_FAIL,
+    RESDATA_UNKNOWN_ERROR,
+    RESDATA_UNKNOWN_NEWS_ID,
+    RESDATA_UNKNOWN_TYPE,
+    RESDATA_GET_CACHE_ERROR,
+    RESDATA_ELASTICK_SEARCH_ERROR,
+    RESDATA_COPY_ERROR,
+    RESDATA_REPETITIVE_OPERATION,
+    RESDATA_INSERT_MONGO_ERROR,
+    RESDATA_INSERT_LOCAL_NEWS_ERROR,
+    RESDATA_INSERT_IMAGES_ERROR,
+    RESDATA_INSERT_COMMON_ERROR,
+    RESDATA_INSERT_REGION_ERROR,
+    RESDATA_INSERT_AREA_ERROR,
+    RESDATA_INSERT_TAG_ERROR,
+    RESDATA_INSERT_COPY_ERROR,
+    RESDATA_SHOW_TYPE_IS_NULL
+};
